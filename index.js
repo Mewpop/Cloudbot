@@ -128,10 +128,7 @@ function gotMessage(msg) {
   }
   if (msg.content === '^eat burger') {
     msg.reply('You Just ate a burger now your food bar is 99%')
-  } else {
-    msg.reply('You dont have a burger')
-  }
-
+  } 
 
 
 
