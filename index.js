@@ -120,8 +120,8 @@ function gotMessage(msg) {
     msg.reply('My author is ZYPLO.')
   }
   if (msg.content === '^my info') {
-    
-    msg.reply()
+    const index8 = Math.floor(Math.random() * reply8.length)
+    msg.reply(reply8[index8])
   }
   if (msg.content === '^buy burger') {
     msg.reply('You just bought a burger and paid 56$')
