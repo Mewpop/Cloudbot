@@ -115,6 +115,9 @@ function gotMessage(msg) {
   if (msg.content === '^bal') {
     msg.reply('Your bal is 0. Like You Loser!!!!!!')
   }
+  if (msg.content === '^info') {
+    msg.reply('My author is ZYPLO.')
+  }
   
 
 
