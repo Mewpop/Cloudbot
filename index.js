@@ -50,10 +50,11 @@ const reply7 = [
   'Hmm!! You stole his $10. I am telling you dont steal from a scrub'
 ]
 client.on('message', gotMessage);
-items = [
-  'bread',
-  'pepsi',
-  'pizza'
+
+const reply8 = [
+  'Your Food bar is 48%, and your Drink bar is 78% I think you should eat a pizza and drink some water.',
+  'Your Food bar 98%, and you drink bar 100%. I think you are taking care of your health',
+  'Your food and drink bar is below 10 pls eat 2 pizza 1 burger and a pepsi'
 ]
 
 
@@ -118,7 +119,18 @@ function gotMessage(msg) {
   if (msg.content === '^info') {
     msg.reply('My author is ZYPLO.')
   }
-  
+  if (msg.content === '^my info') {
+    
+    msg.reply()
+  }
+  if (msg.content === '^buy burger') {
+    msg.reply('You just bought a burger and paid 56$')
+  }
+  if (msg.content === '^eat burger') {
+    msg.reply('You Just ate a burger now your food bar is 99%')
+  } else {
+    msg.reply('You dont have a burger')
+  }
 
 
 
