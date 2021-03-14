@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const Commando = require('discord.js-commando')
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -55,6 +56,30 @@ const reply8 = [
   'Your Food bar is 48%, and your Drink bar is 78% I think you should eat a pizza and drink some water.',
   'Your Food bar 98%, and you drink bar 100%. I think you are taking care of your health',
   'Your food and drink bar is below 10 pls eat 2 pizza 1 burger and a pepsi'
+]
+const reply9 = [
+  'Hey!! bro just chill.. Type "^eat burger".. I am giving You a free burger and $200.',
+  'Bro i am giving you $2000.. Organize A partyy Type "^create party"'
+]
+item = [
+  'burger',
+  'pizza',
+  'pepsi'
+]
+const reply10 = [
+  'The delivery buy came and delivered the pizza',
+  'Heyy!! The delivery boy came but you didnt open the gate',
+  'Bruhh!! The delivery boy came and was delivering the pizza but when he asked for money you killed him..'
+]
+const reply11 = [
+  'The delivery boy came and delivered you the burger',
+  'Heyy! The total bill was $126. But You tricked the delivery boy and paid $76. Thats bad',
+  'The delivery boy was delivering the burger but when you asked for ketchup, He mudered you.'
+]
+const reply12 = [
+  'The delevery boy was not able to come, to Your place',
+  'Delivery was success. But the pepsi was very chilled. When you drank it Then cough catched you paid $200 extra for hospital fees.',
+  'Hmm! you shaked the pepsi very hard that its lather fall on you'
 ]
 a = 1
 b = 1
@@ -130,7 +155,6 @@ function gotMessage(msg) {
   }
   if (msg.content === '^buy burger') {
     msg.reply('You just bought a burger and paid 56$')
-    a1 + b1
   }
   if (msg.content === '^eat burger') {
     msg.reply('You Just ate a burger now your food bar is 99%')
@@ -138,9 +162,39 @@ function gotMessage(msg) {
   if (msg.content === '^inventory') {
     msg.reply('You have ' + sum + 'Burgers. And ' + sum1 + 'Pizza') 
   }
+  if (msg.content === '^feeling bad') {
+    const index9 = Math.floor(Math.random() * reply9.length)
+    msg.reply(reply9[index9])
+  }
+  if (msg.content === '^create party') {
+    msg.reply('Hey you organized a party.. Hey tell your friends to type "^join party". And order something by typing "^order <food item>"')
+  }
+  g = Boolean('there is no party created')
+  if (msg.content === '^join party') {
+    msg.reply('You have joined the party')
+  } if (msg.content === '^join party') {
+    msg.reply(g)
+  }
+  if (msg.content === '^order pizza') {
+    msg.reply('You have ordered pizza for $56')
+  } if (msg.content === '^order pizza') {
+    const index10 = Math.floor(Math.random() * reply10.length)
+    msg.reply(reply10[index10])
+  }
+  if (msg.content === '^order burger') {
+    msg.reply('You have ordered burger for $126')
+  } if (msg.content === '^order burger') {
+    const index11 = Math.floor(Math.random() * reply11.length)
+    msg.reply(reply11[index11])
+  }
+  if (msg.content === '^order pepsi') {
+    msg.reply('You have ordered pepsi for $20')
+  } if (msg.content === '^order pepsi') {
+    const index12 = Math.floor(Math.random() * reply12.length)
+    msg.reply(reply12[index12])
+  }
   
-
-
+  
 
 
   
@@ -150,4 +204,7 @@ function gotMessage(msg) {
 
 
 
-client.login(process.env.token);
+
+
+
+client.login('ODE5NzY4NzI2NDEyNzIyMTg5.YErbHg.RjcWxTEko2J_QW5kzawR20D8cPc');
