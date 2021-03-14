@@ -138,6 +138,7 @@ function gotMessage(msg) {
   if (msg.content === '^inventory') {
     msg.reply('You have ' + sum + 'Burgers. And ' + sum1 + 'Pizza') 
   }
+  
 
 
 
