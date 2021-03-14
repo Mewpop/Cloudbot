@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const Commando = require('discord.js-commando')
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -207,4 +207,4 @@ function gotMessage(msg) {
 
 
 
-client.login(process.env.token);
+client.login('ODE5NzY4NzI2NDEyNzIyMTg5.YErbHg.A4qiyfxqF0xRvUyLsM-iTYYJbnQ');
