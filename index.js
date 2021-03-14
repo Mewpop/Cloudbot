@@ -81,7 +81,18 @@ const reply12 = [
   'Delivery was success. But the pepsi was very chilled. When you drank it Then cough catched you paid $200 extra for hospital fees.',
   'Hmm! you shaked the pepsi very hard that its lather fall on you'
 ]
-a = 1
+const reply13 = [
+  'You started matchmaking.. Not able to enter the matchmaking. Pls Check your Network/Internet connection.. ',
+  'You started matchmaking.. You entered the match!! You played like a bot. You killed 0 players',
+  'You started matchmaking.. You entered the match!! You played like KTG/Pro. You killed 11 players, and got BOYAAH!!',
+  'You started matchmaking.. You entered the match!! You played average. You killed 4 players.. Next time practice well..'
+]
+const reply14 = [
+  'You started matchmaking of clash squad.. You entered the match!! You killed 7 players',
+  'You started matchmaking.. Not able to enter the matchmaking. Pls check your Network/Internet connection..',
+  'You started matchmaking.. You entered the match!! You played average. You killed 9 players'
+]
+a = 1 
 b = 1
 sum = a + b
 a1 = 1
@@ -199,6 +210,17 @@ client.on('message', function(msg) {
   } if (msg.content === '^order pepsi') {
     const index12 = Math.floor(Math.random() * reply12.length)
     msg.reply(reply12[index12])
+  }
+  if (msg.content === '^play free fire') {
+    msg.reply('Which Mode do you wanna play? We currently have 2 modes enabled. Classic and Clash squad. Type "^classic to play classic, and "^royal" to play clash squad')
+  }
+  if (msg.content === '^classic') {
+    const index13 = Math.floor(Math.random() * reply13.length)
+    msg.reply(reply13[index13])
+  }
+  if (msg.content === '^royal') {
+    const index14 = Math.floor(Math.random() * reply14.length.length)
+    msg.reply(reply14[index14])
   }
   
   
