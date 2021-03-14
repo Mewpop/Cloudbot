@@ -160,7 +160,7 @@ client.on('message', function(msg) {
   if (msg.content === '^eat burger') {
     msg.reply('You Just ate a burger now your food bar is 99%')
   }
-  if (msg.content === '^steal @ᴋᴀᴛʏᴀɴ ᴛʜᴇ ɢʀᴇᴀᴛ') {
+  if (msg.content === '^steal @ᴋᴀᴛʏᴀɴ ᴛʜᴇ ɢʀᴇᴀᴛ#7664') {
     msg.reply('You are not suppossed to steal a scrub')
   }
   
