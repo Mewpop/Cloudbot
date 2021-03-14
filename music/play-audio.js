@@ -3,7 +3,7 @@ const Commando = require('discord.js-commando')
 module.exports = class PlayAudioCommand extends Commando.Command {
     constructor(client){
         super(client, {
-            name: 'playaudio',
+            name: 'cplayaudio',
             gorup: 'music',
             memberName: 'playaudio',
             description: 'plays music'
