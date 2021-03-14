@@ -89,7 +89,7 @@ a2 = 1
 sum1 = a1 + a2
 
 
-client.on('message', async message => {
+client.on('message', function(msg) {
   if (msg.content ===  '^how will be my day today') {
     const index = Math.floor(Math.random() * replies.length)
     msg.reply(replies[index])
