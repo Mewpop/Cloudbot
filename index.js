@@ -56,8 +56,12 @@ const reply8 = [
   'Your Food bar 98%, and you drink bar 100%. I think you are taking care of your health',
   'Your food and drink bar is below 10 pls eat 2 pizza 1 burger and a pepsi'
 ]
-
-
+a = 1
+b = 1
+sum = a + b
+a1 = 1
+a2 = 1
+sum1 = a1 + a2
 
 
 function gotMessage(msg) {
@@ -120,15 +124,20 @@ function gotMessage(msg) {
     msg.reply('My author is ZYPLO.')
   }
   if (msg.content === '^my info') {
+    (a + b)
     const index8 = Math.floor(Math.random() * reply8.length)
     msg.reply(reply8[index8])
   }
   if (msg.content === '^buy burger') {
     msg.reply('You just bought a burger and paid 56$')
+    a1 + b1
   }
   if (msg.content === '^eat burger') {
     msg.reply('You Just ate a burger now your food bar is 99%')
-  } 
+  }
+  if (msg.content === '^inventory') {
+    msg.reply('You have ' + sum + 'Burgers. And ' + sum1 + 'Pizza') 
+  }
 
 
 
