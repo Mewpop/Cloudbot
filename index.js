@@ -49,7 +49,7 @@ const reply7 = [
   'Hey bruhhh! You got nothing! Bcoz you were stealing a scrub',
   'Hmm!! You stole his $10. I am telling you dont steal from a scrub'
 ]
-client.on('message', gotMessage);
+
 
 const reply8 = [
   'Your Food bar is 48%, and your Drink bar is 78% I think you should eat a pizza and drink some water.',
@@ -60,7 +60,7 @@ const reply8 = [
 
 
 
-function gotMessage(msg) {
+client.on('message', async message => {
   if (msg.content ===  '^how will be my day today') {
     const index = Math.floor(Math.random() * replies.length)
     msg.reply(replies[index])
@@ -107,7 +107,7 @@ function gotMessage(msg) {
     msg.reply('|EAT|, |DAILY|, |CRATE|, |DAY|, |HI|, |MINE|, |SCORE IN EXAMS|')
   }
   if (msg.content === '^money') {
-    msg.reply('Heyy!! You are suppose to view a scrub/s balance..')
+    msg.reply('Heyy!! You are not supposed to view a scrub/s balance..')
   }
   if (msg.content === '^rob') {
     const index7 = Math.floor(Math.random() * reply7.length)
@@ -120,15 +120,19 @@ function gotMessage(msg) {
     msg.reply('My author is ZYPLO.')
   }
   if (msg.content === '^my info') {
-    
-    msg.reply()
+    const index8 = Math.floor(Math.random() * reply8.length)
+    msg.reply(reply8[index8])
   }
   if (msg.content === '^buy burger') {
     msg.reply('You just bought a burger and paid 56$')
   }
   if (msg.content === '^eat burger') {
     msg.reply('You Just ate a burger now your food bar is 99%')
-  } 
+  }
+  if (msg.content === '^steal @ᴋᴀᴛʏᴀɴ ᴛʜᴇ ɢʀᴇᴀᴛ') {
+    msg.reply('You are not suppossed to steal a scrub')
+  }
+  
 
 
 
@@ -136,7 +140,7 @@ function gotMessage(msg) {
   
 
 
-};
+});
 
 
 
