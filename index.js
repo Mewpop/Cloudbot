@@ -207,4 +207,4 @@ function gotMessage(msg) {
 
 
 
-client.login('ODE5NzY4NzI2NDEyNzIyMTg5.YErbHg.RjcWxTEko2J_QW5kzawR20D8cPc');
+client.login(process.env.token);
