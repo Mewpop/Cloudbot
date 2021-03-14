@@ -149,10 +149,8 @@ client.on('message', async message => {
     msg.reply('My author is ZYPLO.')
   }
   if (msg.content === '^my info') {
-<<<<<<< HEAD
-=======
+
     (a + b)
->>>>>>> ee8b01a74d379890b7186f525b079efdd35a03ad
     const index8 = Math.floor(Math.random() * reply8.length)
     msg.reply(reply8[index8])
   }
@@ -162,14 +160,12 @@ client.on('message', async message => {
   if (msg.content === '^eat burger') {
     msg.reply('You Just ate a burger now your food bar is 99%')
   }
-<<<<<<< HEAD
   if (msg.content === '^steal @ᴋᴀᴛʏᴀɴ ᴛʜᴇ ɢʀᴇᴀᴛ') {
     msg.reply('You are not suppossed to steal a scrub')
   }
   
 
 
-=======
   if (msg.content === '^inventory') {
     msg.reply('You have ' + sum + 'Burgers. And ' + sum1 + 'Pizza') 
   }
@@ -206,7 +202,7 @@ client.on('message', async message => {
   }
   
   
->>>>>>> ee8b01a74d379890b7186f525b079efdd35a03ad
+
 
 
   
