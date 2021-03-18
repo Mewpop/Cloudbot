@@ -92,6 +92,19 @@ const reply14 = [
   'You started matchmaking.. Not able to enter the matchmaking. Pls check your Network/Internet connection..',
   'You started matchmaking.. You entered the match!! You played average. You killed 9 players'
 ]
+
+const reply15 = [
+  'You entered the match.. You killed 12 players.. You leveled up to 1 > 3',
+  'You are not able to enter the match.. Pls check your network and try again',
+  'You entered the match.. You were in the middle of the match, but your girlfriend called you.. You talked 3 hours with you girlfriend.. You forgot about the match.. But its okay. You didnt get any minus coz its tdm. Dont do this in classic...'
+]
+
+const reply16 = [
+  'You entered the match.. You killed 6 players.. You leveled up to 1 > 4',
+  'You are not able to enter the match.. Check you internet connection and try again',
+  'You entered the match.. You were in the middle of the match, but your friend called you.. You went into his house and killed him.. His mother called the police and now you are in the prison.. Congo'
+]
+
 a = 1 
 b = 1
 sum = a + b
@@ -219,13 +232,29 @@ client.on('message', function(msg) {
     msg.reply(reply13[index13])
   }
   if (msg.content === '^royal') {
-    const index14 = Math.floor(Math.random() * reply14.length.length)
+    const index14 = Math.floor(Math.random() * reply14.length)
     msg.reply(reply14[index14])
   }
-  
-  
-
-
+  if (msg.content === '^play') {
+    msg.reply('Tere baap ka naukar nhi hu me')
+  }
+  if (msg.content === '^play pubg') {
+    msg.reply('We have currently two mode available TDM and Classic.. Type "^play pubg tdm" to play tdm mode. And type "^play pubg classic <map>" to play classic mode. We only have erangle map available.')
+  }
+  if (msg.content === '^play pubg tdm') {
+    msg.reply('You have started match making')
+  }
+  if (msg.content === '^play pubg tdm') {
+    const index15 = Math.floor(Math.random() * reply15.length)
+    msg.reply(reply15[index15])
+  }
+  if (msg.content === '^play pubg classic') {
+    msg.reply('You have started the match making')
+  }
+  if (msg.content === '^play pubg classic') { 
+    const index16 = Math.floor(Math.random() * reply16.length)
+    msg.reply(reply16[index16])
+  }
 
   
 
